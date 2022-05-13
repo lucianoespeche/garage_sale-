@@ -47,7 +47,9 @@
         display: flex;
         justify-content: space-between;
         padding: 0 24px;
-        border-bottom: 1px solid var(--very-light-pink);
+        }
+        .navbartop {
+            border-bottom: 3tpx solid var(--text-input-field)
         }
         .menu {
             display: none;
@@ -82,6 +84,29 @@
             border: 1px solid #ACD9B2;
             color: #ACD9B2;
         }
+        .navbardown ul {
+            list-style: none;
+            padding: 0;
+            margin: -7px;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            margin-left: 12px;
+        }
+        .navbardown {
+            display: flex;
+        }
+        .navbardown ul li a {
+            color: var(--very-light-pink);
+            text-decoration: none;
+            border: 1px solid white ;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .navbardown ul li a:hover {
+            border: 1px solid #ACD9B2;
+            color: #ACD9B2;
+        }
         .navbar-email {
             color: var(--very-light-pink);
             font-size: var(--sm);
@@ -104,6 +129,12 @@
             justify-content: center;
             align-items: center;
 
+        }
+        .searchbox-container {
+            display: none;
+        }
+        .navbardown {
+            display: none;
         }
         section {
             margin-top: 24px;
@@ -221,6 +252,26 @@
             .navbar-left ul{
                 display: none;
             }
+            .navbardown {
+                display: block;
+            }
+            .navbardown {
+                border: none;
+            }
+            .searchboxinput {
+                width: 340px;
+                height: 35px;
+                background-color: var(--text-input-field);
+                margin-top: 5px;
+                border-radius: 10px;
+                border: 1px solid var(--very-light-pink);
+                font-size: var(--sm);
+                color: var(--very-light-pink);
+            }
+            .searchbox-container {
+                display: flex;
+                justify-content: center;
+            }
             .navbar-email {
                 display: none;
             }
@@ -228,7 +279,7 @@
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="navbartop">
         <img src="./icons/icon_menu.svg" alt="menu" class="menu">
         <div class="navbar-left">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
@@ -258,6 +309,35 @@
             <ul>
                 <li class="navbar-email">yardsale@domain.com</li>
                 <li class="navbar-shopping-cart"> <img src="./icons/icon_shopping_cart.svg" alt=""><div>2</div></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="searchbox-container">
+        <form id="searchbox" method="get" action="http://mywebsite.com">
+            <input type="text" class="searchboxinput"  value="      Search product" name="q" size="21" maxlength="120">
+        </form>
+    </div>
+    <nav>
+        <div class="navbardown">
+            <ul>
+                <li>
+                    <a href="">All</a>
+                </li>
+                <li>
+                    <a href="">Clothes</a>
+                </li>
+                <li>
+                    <a href="">Electronics</a>
+                </li>
+                <li>
+                    <a href="">Furniture</a>
+                </li>
+                <li>
+                    <a href="">Toys</a>
+                </li>
+                <li>
+                    <a href="">Others</a>
+                </li>
             </ul>
         </div>
     </nav>
